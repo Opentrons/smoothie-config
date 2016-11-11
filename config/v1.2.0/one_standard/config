@@ -1,0 +1,72 @@
+# NOTE Lines must not exceed 132 characters
+# Robot module configurations : general handling of movement G-codes and slicing into moves
+version                                      v1.2.0           # Version of this file
+
+ot_version                                   one_standard
+
+default_feed_rate                            4000             # Default rate ( mm/minute ) for G1/G2/G3 moves
+default_seek_rate                            4000             # Default rate ( mm/minute ) for G0 moves
+acceleration                                 200              # Acceleration in mm/second/second.
+z_acceleration                               200              # Acceleration for Z only moves in mm/s^2
+
+z_axis_max_speed                             1600      # mm/min
+gamma_max_rate                               1600.0    # mm/min
+# psi_min_endstop                              1.27^!
+
+alpha_steps_per_mm                           80.0
+beta_steps_per_mm                            80.0
+
+# HOMING CONFIGS note: min needs to align with retract eg:( _min -3 ==> _homing_retract --> 3 )
+# _homing_retract has a conversion factor of "steps per mm"
+alpha_min                         -3        # mm
+beta_min                          -3
+gamma_min                         -3
+chi_min                           -3
+psi_min                           -3
+alpha_homing_retract              237.6    # --> 3 MM
+beta_homing_retract               238.5
+gamma_homing_retract              3206.1
+chi_homing_retract                4800
+psi_homing_retract                4800
+
+alpha_fast_homing_rate_mm_s       35        # feedrates in mm/second
+beta_fast_homing_rate_mm_s        35
+gamma_fast_homing_rate_mm_s       20
+chi_fast_homing_rate_mm_s         7
+psi_fast_homing_rate_mm_s         7
+
+switch.gpio0.enable                   true           #
+switch.gpio0.input_off_command        M40            #
+switch.gpio0.input_on_command         M41            #
+switch.gpio0.output_pin               1.22           #
+switch.gpio0.output_type              digital        #
+
+switch.gpio1.enable                   true           #
+switch.gpio1.input_off_command        M42            #
+switch.gpio1.input_on_command         M43            #
+switch.gpio1.output_pin               1.23           #
+switch.gpio1.output_type              digital        #
+
+switch.gpio2.enable                   true           #
+switch.gpio2.input_off_command        M44            #
+switch.gpio2.input_on_command         M45            #
+switch.gpio2.output_pin               2.4            #
+switch.gpio2.output_type              digital        #
+
+switch.gpio3.enable                   true           #
+switch.gpio3.input_off_command        M46            #
+switch.gpio3.input_on_command         M47            #
+switch.gpio3.output_pin               2.5            #
+switch.gpio3.output_type              digital        #
+
+switch.gpio4.enable                   true           #
+switch.gpio4.input_off_command        M48            #
+switch.gpio4.input_on_command         M49            #
+switch.gpio4.output_pin               2.6            #
+switch.gpio4.output_type              digital        #
+
+switch.gpio5.enable                   true           #
+switch.gpio5.input_off_command        M50            #
+switch.gpio5.input_on_command         M51            #
+switch.gpio5.output_pin               2.7            #
+switch.gpio5.output_type              digital        #

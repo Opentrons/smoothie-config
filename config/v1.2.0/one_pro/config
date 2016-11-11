@@ -1,10 +1,20 @@
 # NOTE Lines must not exceed 132 characters
 # Robot module configurations : general handling of movement G-codes and slicing into moves
-version                                      v1.0.3b           # Version of this file
+version                                      v1.2.0           # Version of this file
 
-z_axis_max_speed                  2000      # mm/min
-gamma_max_rate                    2000.0    # mm/min
-psi_min_endstop                   1.27^!
+ot_version                                   one_pro
+
+default_feed_rate                            4000             # Default rate ( mm/minute ) for G1/G2/G3 moves
+default_seek_rate                            4000             # Default rate ( mm/minute ) for G0 moves
+acceleration                                 200              # Acceleration in mm/second/second.
+z_acceleration                               200              # Acceleration for Z only moves in mm/s^2
+
+z_axis_max_speed                             1600      # mm/min
+gamma_max_rate                               1600.0    # mm/min
+psi_min_endstop                              1.27^!
+
+alpha_steps_per_mm                           80.0
+beta_steps_per_mm                            80.0
 
 # HOMING CONFIGS note: min needs to align with retract eg:( _min -3 ==> _homing_retract --> 3 )
 # _homing_retract has a conversion factor of "steps per mm"
@@ -24,8 +34,6 @@ beta_fast_homing_rate_mm_s        35
 gamma_fast_homing_rate_mm_s       20
 chi_fast_homing_rate_mm_s         7
 psi_fast_homing_rate_mm_s         7
-
-ot_version                        one
 
 switch.gpio0.enable                   true           #
 switch.gpio0.input_off_command        M40            #
