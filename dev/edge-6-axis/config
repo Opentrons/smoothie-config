@@ -12,11 +12,11 @@ delta_acceleration                           300.0            # A axis accelerat
 epsilon_acceleration                         300.0            # B axis acceleration in mm/sec²
 
 # Cartesian axis speed limits
-x_axis_max_speed                             30000            # mm/min
-y_axis_max_speed                             30000            # mm/min
-z_axis_max_speed                             10000             # mm/min
-a_axis_max_speed                             1000             # mm/min
-b_axis_max_speed                             1000             # mm/min
+x_axis_max_speed                             25000            # mm/min
+y_axis_max_speed                             25000            # mm/min
+z_axis_max_speed                             6000             # mm/min
+a_axis_max_speed                             600             # mm/min
+b_axis_max_speed                             600             # mm/min
 
 # X axis
 alpha_step_pin                               2.0              # Pin for alpha stepper step signal
