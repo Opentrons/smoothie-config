@@ -2,18 +2,19 @@ ot_version                                   testing-6-axis
 
 home_z_first                                 true             # set to true to home the Z first
 
-default_feed_rate                            4000             # Default rate ( mm/minute ) for G1/G2/G3 moves
-default_seek_rate                            4000             # Default rate ( mm/minute ) for G0 moves
+default_feed_rate                            10000             # Default rate ( mm/minute ) for G1/G2/G3 moves
+default_seek_rate                            10000             # Default rate ( mm/minute ) for G0 moves
 
 
-acceleration                                 200.0            # XYZ axis acceleration in mm/sec²
+acceleration                                 1000.0            # XY axis acceleration in mm/sec²
+z_acceleration                               1000.0            # Z axis acceleration in mm/sec²
 delta_acceleration                           300.0            # A axis acceleration in mm/sec²
 epsilon_acceleration                         300.0            # B axis acceleration in mm/sec²
 
 # Cartesian axis speed limits
 x_axis_max_speed                             30000            # mm/min
 y_axis_max_speed                             30000            # mm/min
-z_axis_max_speed                             2000             # mm/min
+z_axis_max_speed                             10000             # mm/min
 a_axis_max_speed                             1000             # mm/min
 b_axis_max_speed                             1000             # mm/min
 
@@ -21,7 +22,7 @@ b_axis_max_speed                             1000             # mm/min
 alpha_step_pin                               2.0              # Pin for alpha stepper step signal
 alpha_dir_pin                                0.5!             # Pin for alpha stepper direction
 alpha_en_pin                                 0.4              # Pin for alpha enable pin
-alpha_current                                0.2              # X stepper motor current
+alpha_current                                1.2              # X stepper motor current
 alpha_max_rate                               30000.0          # mm/min
 alpha_steps_per_mm                           80               # Steps per mm for alpha stepper
 endstop.minx.enable                          true             # enable an endstop
@@ -39,7 +40,7 @@ endstop.minx.retract                         3                # bounce off endst
 beta_step_pin                                2.1              # Pin for beta stepper step signal
 beta_dir_pin                                 0.11!            # Pin for beta stepper direction
 beta_en_pin                                  0.10             # Pin for beta enable
-beta_current                                 0.2              # Y stepper motor current
+beta_current                                 2.0              # Y stepper motor current
 beta_max_rate                                30000.0          # mm/min
 beta_steps_per_mm                            80               # Steps per mm for beta stepper
 endstop.miny.enable                          true             # enable an endstop
@@ -57,9 +58,9 @@ endstop.miny.retract                         3                # bounce off endst
 gamma_step_pin                               2.2              # Pin for gamma stepper step signal
 gamma_dir_pin                                0.20             # Pin for gamma stepper direction
 gamma_en_pin                                 0.19             # Pin for gamma enable
-gamma_current                                0.5              # Z stepper motor current
-gamma_max_rate                               30000.0          # mm/min
-gamma_steps_per_mm                           1068.7           # Steps per mm for gamma stepper
+gamma_current                                1.2              # Z stepper motor current
+gamma_max_rate                               10000.0          # mm/min
+gamma_steps_per_mm                           400              # Steps per mm for gamma stepper
 endstop.minz.enable                          true             # enable an endstop
 endstop.minz.limit_enable                    true             # set to true to enable the limit on this endstop
 endstop.minz.pin                             1.28!^           # pin
