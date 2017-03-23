@@ -10,7 +10,7 @@ acceleration                                 2000.0            # XY axis acceler
 z_acceleration                               2000.0            # Z axis acceleration in mm/sec²
 delta_acceleration                           300.0             # A axis acceleration in mm/sec²
 epsilon_acceleration                         300.0             # B axis acceleration in mm/sec²
-zeta_acceleration                            300.0             # C axis acceleration in mm/sec²
+zeta_acceleration                         300.0             # B axis acceleration in mm/sec²
 
 # Cartesian axis speed limits
 x_axis_max_speed                             25000            # mm/min
@@ -26,7 +26,7 @@ alpha_dir_pin                                0.5!             # Pin for alpha st
 alpha_en_pin                                 0.4              # Pin for alpha enable pin
 alpha_current                                1.2              # X stepper motor current
 alpha_max_rate                               30000.0          # mm/min
-alpha_steps_per_mm 80.0 #                    80               # Steps per mm for alpha stepper
+alpha_steps_per_mm                           80               # Steps per mm for alpha stepper
 endstop.minx.enable                          true             # enable an endstop
 endstop.minx.limit_enable                    true             # set to true to enable the limit on this endstop
 endstop.minx.pin                             1.24!^           # pin
@@ -42,7 +42,7 @@ endstop.minx.retract                         3                # bounce off endst
 beta_step_pin                                2.1              # Pin for beta stepper step signal
 beta_dir_pin                                 0.11!            # Pin for beta stepper direction
 beta_en_pin                                  0.10             # Pin for beta enable
-beta_current                                 1.2              # Y stepper motor current
+beta_current                                 2.0              # Y stepper motor current
 beta_max_rate                                30000.0          # mm/min
 beta_steps_per_mm                            80               # Steps per mm for beta stepper
 endstop.miny.enable                          true             # enable an endstop
@@ -82,10 +82,10 @@ delta_current                                1.2              # A stepper motor 
 delta_max_rate                               1000.0          # mm/min
 delta_steps_per_mm                           1600.0           # may be steps per degree for example
 endstop.mina.enable                          true             # enable an endstop
-endstop.mina.limit_enable                    true             # set to true to enable the limit on this # endstop
+endstop.mina.limit_enable                    true             # set to true to enable the limit on this endstop
 endstop.mina.pin                             1.25!^           # pin
 endstop.mina.homing_direction                home_to_min      # direction it moves to the endstop
-endstop.mina.homing_position                 0                # the cartesian coordinate this is set to # when it mes
+endstop.mina.homing_position                 0                # the cartesian coordinate this is set to when it homes
 endstop.mina.axis                            A                # the axis designator
 endstop.mina.max_travel                      100              # the maximum travel in mm before it times out
 endstop.mina.fast_rate                       7              # fast homing rate in mm/sec
@@ -100,10 +100,10 @@ epsilon_current                              1.2              # B stepper motor 
 epsilon_max_rate                             1000.0          # mm/min
 epsilon_steps_per_mm                         1600.0           # may be steps per degree for example
 endstop.minb.enable                          true             # enable an endstop
-endstop.minb.limit_enable                    true             # set to true to enable the limit on this # endstop
+endstop.minb.limit_enable                    true             # set to true to enable the limit on this endstop
 endstop.minb.pin                             1.27!^           # pin
 endstop.minb.homing_direction                home_to_min      # direction it moves to the endstop
-endstop.minb.homing_position                 0                # the cartesian coordinate this is set to # when it mes
+endstop.minb.homing_position                 0                # the cartesian coordinate this is set to when it homes
 endstop.minb.axis                            B                # the axis designator
 endstop.minb.max_travel                      100              # the maximum travel in mm before it times out
 endstop.minb.fast_rate                       7              # fast homing rate in mm/sec
@@ -111,22 +111,22 @@ endstop.minb.slow_rate                       4              # slow homing rate i
 endstop.minb.retract                         3                # bounce off endstop in mm
 
 # C axis
-zeta_step_pin                             3.25              # Pin for delta stepper step signal
-zeta_dir_pin                              3.26             # Pin for delta stepper direction
-zeta_en_pin                               2.11             # Pin for delta enable
+zeta_step_pin                             2.8              # Pin for delta stepper step signal
+zeta_dir_pin                              2.13             # Pin for delta stepper direction
+zeta_en_pin                               4.29             # Pin for delta enable
 zeta_current                              1.2              # C stepper motor current
 zeta_max_rate                             1000.0           # mm/min
 zeta_steps_per_mm                         1600.0           # may be steps per degree for example
-endstop.minc.enable                          true             # enable an endstop
-endstop.minc.limit_enable                    true             # set to true to enable the limit on this endstop
-endstop.minc.pin                             1.30!^           # pin
-endstop.minc.homing_direction                home_to_min      # direction it moves to the endstop
-endstop.minc.homing_position                 0                # the cartesian coordinate this is set to when # it homes
-endstop.minc.axis                            C                # the axis designator
-endstop.minc.max_travel                      100              # the maximum travel in mm before it times out
-endstop.minc.fast_rate                       7                # fast homing rate in mm/sec
-endstop.minc.slow_rate                       4                # slow homing rate in mm/sec
-endstop.minc.retract                         3                # bounce off endstop in mm
+zeta.minb.enable                          true             # enable an endstop
+zeta.minb.limit_enable                    true             # set to true to enable the limit on this endstop
+zeta.minb.pin                             1.27!^           # pin
+zeta.minb.homing_direction                home_to_min      # direction it moves to the endstop
+zeta.minb.homing_position                 0                # the cartesian coordinate this is set to when it homes
+zeta.minb.axis                            B                # the axis designator
+zeta.minb.max_travel                      100              # the maximum travel in mm before it times out
+zeta.minb.fast_rate                       7                # fast homing rate in mm/sec
+zeta.minb.slow_rate                       4                # slow homing rate in mm/sec
+zeta.minb.retract                         3                # bounce off endstop in mm
 
 
 
@@ -168,6 +168,7 @@ switch.gpio5.output_type              digital        #
 
 
 
+
 microseconds_per_step_pulse                  1                # Duration of step pulses to stepper drivers, in microseconds
 base_stepping_frequency                      100000           # Base frequency for stepping
 
@@ -194,4 +195,3 @@ msd_disable                                 false            # disable the MSD (
 
 # Only needed on a smoothieboard
 currentcontrol_module_enable                 true             #
-alpha_steps_per_msm         80.0         # added
