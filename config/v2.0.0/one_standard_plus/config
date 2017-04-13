@@ -1,6 +1,6 @@
 version                                      v2.0.0
 
-ot_version                                   one_pro_plus
+ot_version                                   one_standard_plus
 
 home_z_first                                 true             # set to true to home the Z first
 
@@ -10,14 +10,12 @@ default_seek_rate                            10000             # Default rate ( 
 acceleration                                 1200.0            # XY axis acceleration in mm/sec²
 z_acceleration                               600.0            # Z axis acceleration in mm/sec²
 delta_acceleration                           200.0             # A axis acceleration in mm/sec²
-epsilon_acceleration                         200.0             # B axis acceleration in mm/sec²
 
 # Cartesian axis speed limits
 x_axis_max_speed                             20000            # mm/min
 y_axis_max_speed                             20000            # mm/min
 z_axis_max_speed                             6000             # mm/min
 a_axis_max_speed                             1200             # mm/min
-b_axis_max_speed                             1200             # mm/min
 
 # X axis
 alpha_step_pin                               2.0              # Pin for alpha stepper step signal
@@ -91,24 +89,6 @@ endstop.mina.fast_rate                       13              # fast homing rate 
 endstop.mina.slow_rate                       10              # slow homing rate in mm/sec
 endstop.mina.retract                         3                # bounce off endstop in mm
 
-# B axis
-epsilon_step_pin                             2.8              # Pin for delta stepper step signal
-epsilon_dir_pin                              2.13             # Pin for delta stepper direction
-epsilon_en_pin                               4.29             # Pin for delta enable
-epsilon_current                              1.33              # B stepper motor current
-epsilon_max_rate                             1200.0          # mm/min
-epsilon_steps_per_mm                         1600.0           # may be steps per degree for example
-endstop.minb.enable                          true             # enable an endstop
-endstop.minb.limit_enable                    true             # set to true to enable the limit on this # endstop
-endstop.minb.pin                             1.27!^           # pin
-endstop.minb.homing_direction                home_to_min      # direction it moves to the endstop
-endstop.minb.homing_position                 0                # the cartesian coordinate this is set to # when it mes
-endstop.minb.axis                            B                # the axis designator
-endstop.minb.max_travel                      100              # the maximum travel in mm before it times out
-endstop.minb.fast_rate                       13              # fast homing rate in mm/sec
-endstop.minb.slow_rate                       10              # slow homing rate in mm/sec
-endstop.minb.retract                         3                # bounce off endstop in mm
-
 
 switch.gpio0.enable                   true           #
 switch.gpio0.input_off_command        M40            #
@@ -170,7 +150,7 @@ second_usb_serial_enable                     false            # This enables a s
 kill_button_enable                           false             # set to true to enable a kill button
 kill_button_pin                              2.12             # kill button pin
 
-msd_disable                                 true            # disable the MSD (USB SDCARD) when set to true (firmware must have been built with DISABLEMSD=1)
+msd_disable                                 false            # disable the MSD (USB SDCARD) when set to true (firmware must have been built with DISABLEMSD=1)
 
 # Only needed on a smoothieboard
 currentcontrol_module_enable                 true             #
