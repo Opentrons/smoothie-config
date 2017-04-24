@@ -31,8 +31,8 @@ endstop.minx.homing_direction                home_to_min      # direction it mov
 endstop.minx.homing_position                 0                # the cartesian coordinate this is set to when it homes
 endstop.minx.axis                            X                # the axis designator
 endstop.minx.max_travel                      500              # the maximum travel in mm before it times out
-endstop.minx.fast_rate                       200              # fast homing rate in mm/sec
-endstop.minx.slow_rate                       100              # slow homing rate in mm/sec
+endstop.minx.fast_rate                       100              # fast homing rate in mm/sec
+endstop.minx.slow_rate                       50              # slow homing rate in mm/sec
 endstop.minx.retract                         3                # bounce off endstop in mm
 
 # Y axis
@@ -49,8 +49,8 @@ endstop.miny.homing_direction                home_to_min      # direction it mov
 endstop.miny.homing_position                 0                # the cartesian coordinate this is set to when it homes
 endstop.miny.axis                            Y                # the axis designator
 endstop.miny.max_travel                      500              # the maximum travel in mm before it times out
-endstop.miny.fast_rate                       200              # fast homing rate in mm/sec
-endstop.miny.slow_rate                       100              # slow homing rate in mm/sec
+endstop.miny.fast_rate                       100              # fast homing rate in mm/sec
+endstop.miny.slow_rate                       50              # slow homing rate in mm/sec
 endstop.miny.retract                         3                # bounce off endstop in mm
 
 # Z axis
@@ -67,8 +67,8 @@ endstop.minz.homing_direction                home_to_min      # direction it mov
 endstop.minz.homing_position                 0                # the cartesian coordinate this is set to when it homes
 endstop.minz.axis                            Z                # the axis designator
 endstop.minz.max_travel                      200              # the maximum travel in mm before it times out
-endstop.minz.fast_rate                       60              # fast homing rate in mm/sec
-endstop.minz.slow_rate                       30              # slow homing rate in mm/sec
+endstop.minz.fast_rate                       40              # fast homing rate in mm/sec
+endstop.minz.slow_rate                       20              # slow homing rate in mm/sec
 endstop.minz.retract                         3                # bounce off endstop in mm
 
 # A axis
