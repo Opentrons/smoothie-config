@@ -153,7 +153,7 @@ base_stepping_frequency                      100000           # Base frequency f
 
 
 
-#planner_queue_size                           32               # DO NOT CHANGE THIS UNLESS YOU KNOW EXACTLY WHAT YOU ARE DOING
+planner_queue_size                           32               # DO NOT CHANGE THIS UNLESS YOU KNOW EXACTLY WHAT YOU ARE DOING
 junction_deviation                           0.01             # Similar to the old "max_jerk", in millimeters,
                                                               # see https://github.com/grbl/grbl/blob/master/planner.c
                                                               # and https://github.com/grbl/grbl/wiki/Configuring-Grbl-v0.8
@@ -174,3 +174,6 @@ msd_disable                                 false            # disable the MSD (
 
 # Only needed on a smoothieboard
 currentcontrol_module_enable                 true             #
+
+# config files must have at least 1 empty line at the end!!
+

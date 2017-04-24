@@ -28,7 +28,7 @@ alpha_max_rate                               20000.0          # mm/min
 alpha_steps_per_mm                           80               # Steps per mm for alpha stepper
 endstop.minx.enable                          true             # enable an endstop
 endstop.minx.limit_enable                    true             # set to true to enable the limit on this endstop
-endstop.minx.pin                             1.24!^           # pin
+endstop.minx.pin                             1.24!^            # pin
 endstop.minx.homing_direction                home_to_min      # direction it moves to the endstop
 endstop.minx.homing_position                 0                # the cartesian coordinate this is set to when it homes
 endstop.minx.axis                            X                # the axis designator
@@ -153,7 +153,7 @@ base_stepping_frequency                      100000           # Base frequency f
 
 
 
-#planner_queue_size                           32               # DO NOT CHANGE THIS UNLESS YOU KNOW EXACTLY WHAT YOU ARE DOING
+planner_queue_size                           32               # DO NOT CHANGE THIS UNLESS YOU KNOW EXACTLY WHAT YOU ARE DOING
 junction_deviation                           0.01             # Similar to the old "max_jerk", in millimeters,
                                                               # see https://github.com/grbl/grbl/blob/master/planner.c
                                                               # and https://github.com/grbl/grbl/wiki/Configuring-Grbl-v0.8
@@ -174,3 +174,6 @@ msd_disable                                 false            # disable the MSD (
 
 # Only needed on a smoothieboard
 currentcontrol_module_enable                 true             #
+
+# config files must have at least 1 empty line at the end!!
+
