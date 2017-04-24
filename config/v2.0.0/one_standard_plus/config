@@ -32,7 +32,7 @@ endstop.minx.homing_position                 0                # the cartesian co
 endstop.minx.axis                            X                # the axis designator
 endstop.minx.max_travel                      500              # the maximum travel in mm before it times out
 endstop.minx.fast_rate                       100              # fast homing rate in mm/sec
-endstop.minx.slow_rate                       50              # slow homing rate in mm/sec
+endstop.minx.slow_rate                       20              # slow homing rate in mm/sec
 endstop.minx.retract                         3                # bounce off endstop in mm
 
 # Y axis
@@ -50,7 +50,7 @@ endstop.miny.homing_position                 0                # the cartesian co
 endstop.miny.axis                            Y                # the axis designator
 endstop.miny.max_travel                      500              # the maximum travel in mm before it times out
 endstop.miny.fast_rate                       100              # fast homing rate in mm/sec
-endstop.miny.slow_rate                       50              # slow homing rate in mm/sec
+endstop.miny.slow_rate                       20              # slow homing rate in mm/sec
 endstop.miny.retract                         3                # bounce off endstop in mm
 
 # Z axis
