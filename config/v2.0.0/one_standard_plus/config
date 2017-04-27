@@ -75,7 +75,7 @@ endstop.minz.retract                         3                # bounce off endst
 delta_step_pin                               2.3              # Pin for delta stepper step signal
 delta_dir_pin                                0.22             # Pin for delta stepper direction
 delta_en_pin                                 0.21             # Pin for delta enable
-delta_current                                1.0              # A stepper motor current
+delta_current                                1.15              # A stepper motor current
 delta_max_rate                               1200.0          # mm/min
 delta_steps_per_mm                           1600.0           # may be steps per degree for example
 endstop.mina.enable                          true             # enable an endstop
@@ -150,7 +150,7 @@ second_usb_serial_enable                     false            # This enables a s
 kill_button_enable                           false             # set to true to enable a kill button
 kill_button_pin                              2.12             # kill button pin
 
-msd_disable                                 false            # disable the MSD (USB SDCARD) when set to true (firmware must have been built with DISABLEMSD=1)
+msd_disable                                 true            # disable the MSD (USB SDCARD) when set to true (firmware must have been built with DISABLEMSD=1)
 
 # Only needed on a smoothieboard
 currentcontrol_module_enable                 true             #

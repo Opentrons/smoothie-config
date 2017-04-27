@@ -150,7 +150,7 @@ second_usb_serial_enable                     false            # This enables a s
 kill_button_enable                           false             # set to true to enable a kill button
 kill_button_pin                              2.12             # kill button pin
 
-msd_disable                                 false            # disable the MSD (USB SDCARD) when set to true (firmware must have been built with DISABLEMSD=1)
+msd_disable                                 true            # disable the MSD (USB SDCARD) when set to true (firmware must have been built with DISABLEMSD=1)
 
 # Only needed on a smoothieboard
 currentcontrol_module_enable                 true             #
