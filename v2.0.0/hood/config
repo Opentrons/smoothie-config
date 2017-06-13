@@ -1,6 +1,6 @@
 version                                      v2.0.0
 
-ot_version                                   one_hood
+ot_version                                   hood
 
 home_z_first                                 true             # set to true to home the Z first
 
